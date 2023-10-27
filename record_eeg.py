@@ -3,7 +3,7 @@ import os
 import numpy as np
 import time
 
-sys.path.append('C:/Users/user1/Documents/gtec/Unicorn Suite/Hybrid Black/Unicorn Python/Lib')
+sys.path.append('') # Add path to the unicorn folder
 import UnicornPy
 
 def connect_to_device():

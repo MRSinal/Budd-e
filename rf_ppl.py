@@ -13,7 +13,7 @@ import record_eeg
 import prepro
 
 import os 
-BASE_PATH = "C:/Users/user1/Documents/Downloads/HackathonGOOOD/Hackathon"
+BASE_PATH = "" # Add path to the folder containing the data
 folders = ["positive_processed", "negative_processed", "neutral_processed"]
 labels_map = {"positive_processed": 0, "negative_processed": 1, "neutral_processed": 2}
     
