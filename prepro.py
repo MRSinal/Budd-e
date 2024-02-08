@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 import mne
-import os
 
 def load_data(data):
     df = pd.DataFrame(data)
@@ -25,7 +24,7 @@ def remove_artifacts(bandpassed_data):
     raw = mne.io.RawArray(bandpassed_data, info)
     
     # Apply ICA for artifact removal
-    ica = mne.preprocessing.ICA(n_components=5, random_state=97, max_iter=800)
+    ica = mne.preprocessing.ICA(n_components=4, random_state=97, max_iter=800)
     ica.fit(raw)
     
     # Assuming the first two ICs represent artifacts. This might need adjustments based on your dataset.

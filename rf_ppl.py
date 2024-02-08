@@ -1,19 +1,13 @@
 import numpy as np
 from sklearn.svm import SVC
-from sklearn import svm
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
-import pandas as pd
 import record_eeg
 import prepro
 
 import os 
-BASE_PATH = "" # Add path to the folder containing the data
+BASE_PATH = "C:/Users/Balint/Documents/Budd-e/" # Add path to the folder containing the data
 folders = ["positive_processed", "negative_processed", "neutral_processed"]
 labels_map = {"positive_processed": 0, "negative_processed": 1, "neutral_processed": 2}
     

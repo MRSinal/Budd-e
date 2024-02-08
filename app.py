@@ -1,4 +1,3 @@
-import openai
 from sklearn import svm
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
@@ -7,14 +6,9 @@ import asyncio
 import numpy as np
 import pandas as pd
 import streamlit as st
-import rf_ppl
-import requests
-import json
-import prepro
-import record_eeg
-import gpt
+import chat
 
-prediction_label = gpt.predicted_label()
+prediction_label = chat.predicted_label()
 def main():
 
     st.title("🧠 Project.Budd-e()")
@@ -36,12 +30,11 @@ def main():
         #container.write(f"You: {user_input}")
         
         # Get chatbot response
-        response = gpt.chatbot_response(user_input)
+        response = chat.chatbot_response(user_input)
         
         # Display chatbot message
         #container.write(f"{response}") 
-        gpt.display_messages(container)
+        chat.display_messages(container)
 
-# Run the asynchronous event loop
 if __name__ == "__main__":
     (main())
